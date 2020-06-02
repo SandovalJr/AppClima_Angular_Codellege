@@ -60,3 +60,10 @@ button {
   color: white;
   cursor: pointer;
 }
+
+@media (min-height: 812px) {
+  .tarjeta {
+    width: 35vh;
+    height: 50vh;
+  }
+}

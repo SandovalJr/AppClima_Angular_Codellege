@@ -23,8 +23,12 @@
   flex-direction: column;
 }
 
+.bucadorTitulo {
+  margin-top: 2%;
+}
+
 .contenedorBuscar .texto {
-  margin-top: 50%;
+  margin-top: 20%;
   color: red;
   font-size: 20px;
 }
@@ -81,6 +85,11 @@ h2 {
     margin-top: 4%;
     height: 80px;
     width: 80px;
+  }
+
+  .bucadorTitulo {
+    margin-top: 7%;
+    margin-bottom: -3%;
   }
 }
 
