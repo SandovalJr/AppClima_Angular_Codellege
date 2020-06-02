@@ -1,0 +1,16 @@
+<div class="contenedor">
+  <div class="contenedorBuscar">
+    <h2 class="text-center">Buscar ciudades:</h2>
+
+    <div class="inputBuscador">
+      <input #inputCiudad type="text" placeholder="Buscar ciudad" />
+      <span><i></i></span>
+    </div>
+
+    <p *ngIf="mostrarTarjeta == false" class="texto">Ciudad no seleccionada</p>
+    <app-cards-weather
+      *ngIf="mostrarTarjeta == true"
+      [climaFiltradoRecibido]="climaFiltrado"
+    ></app-cards-weather>
+  </div>
+</div>

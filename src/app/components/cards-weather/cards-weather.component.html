@@ -1,0 +1,25 @@
+<div class="contenedor">
+  <h5>{{ climaFiltradoRecibido.NombreCiudad }}</h5>
+  <img [src]="climaFiltradoRecibido.Imagen | construirUrlImagen" />
+  <!--  http://openweathermap.org/img/wn/10n@2x.png -->
+  <div class="climaActual">
+    <p>{{ climaFiltradoRecibido.TemperaturaActual | kelvinCelsius }}</p>
+    <p>{{ climaFiltradoRecibido.ClimaActual }}</p>
+  </div>
+
+  <div class="temperaturasEsperadas">
+    <div class="temperaturaMinima">
+      <p>{{ climaFiltradoRecibido.TemperaturaMinima | kelvinCelsius }}</p>
+      <p class="textoTemperatura">Min</p>
+    </div>
+
+    <div class="temperaturaMaxima">
+      <p>{{ climaFiltradoRecibido.TemperaturaMaxima | kelvinCelsius }}</p>
+      <p class="textoTemperatura">Max</p>
+    </div>
+  </div>
+
+  <button>
+    ADD CITY
+  </button>
+</div>

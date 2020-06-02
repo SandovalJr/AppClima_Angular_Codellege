@@ -1,0 +1,26 @@
+
+cloudy
+background: rgb(238,174,202);
+background: linear-gradient(11deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+
+
+sunny
+background: rgb(34,193,195);
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+
+snowy
+background: rgb(251,255,255);
+background: linear-gradient(0deg, rgba(251,255,255,1) 3%, rgba(139,229,241,1) 13%, rgba(34,199,222,1) 26%, rgba(70,163,176,1) 41%, rgba(53,102,197,1) 61%, rgba(21,32,237,1) 100%);
+
+
+rain
+
+background: rgb(52,188,210);
+background: linear-gradient(0deg, rgba(52,188,210,0.7259278711484594) 10%, rgba(38,66,122,0.8211659663865546) 43%, rgba(21,32,237,0.969625350140056) 100%);
+
+
+storm
+
+background: rgb(208,199,0);
+background: linear-gradient(0deg, rgba(208,199,0,0.8491771708683473) 5%, rgba(33,60,67,1) 17%, rgba(33,60,65,1) 25%, rgba(38,66,122,1) 56%, rgba(21,32,237,1) 100%);
