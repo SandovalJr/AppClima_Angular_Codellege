@@ -13,6 +13,8 @@ import {
   Wind,
   ClimaFiltrado,
 } from './../../interfaces/clima.interface';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -25,12 +27,15 @@ export class SearchComponent implements OnInit {
   private apiKey = `&appid=8af63de9e25ee8c3e740ca528fdd2ae6`;
   public climaFiltrado: ClimaFiltrado;
   public mostrarTarjeta: boolean = false;
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private router: Router) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit(): void {
     this.ObtenerClimaActual();
+  }
+  IrHome() {
+    this.router.navigate([""])
   }
 
   private ObtenerClimaActual() {
@@ -56,11 +61,17 @@ export class SearchComponent implements OnInit {
       )
       .subscribe(
         (objetoFlitrado: ClimaFiltrado) => {
-          (this.climaFiltrado = objetoFlitrado),
-            (this.mostrarTarjeta = true)
-            // console.log((this.climaFiltrado = objetoFlitrado));
+          (this.climaFiltrado = objetoFlitrado), (this.mostrarTarjeta = true);
+          // console.log((this.climaFiltrado = objetoFlitrado));
         },
-        () => this.ObtenerClimaActual()
+        () => {
+          Swal.fire({
+            icon: 'error',
+            title: 'Ocurrio un error',
+            text: 'El nombre de la ciudad no existe!',
+          });
+          this.ObtenerClimaActual();
+        }
       );
   }
 }

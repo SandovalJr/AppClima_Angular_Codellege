@@ -13,7 +13,7 @@
   align-items: center;
 }
 .contenedorBuscar {
-  width: 90%;
+  width: 70%;
   height: 95vh;
   background: #fff;
   border-radius: 10px;
@@ -21,6 +21,7 @@
   /* opacity: .98; */
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .bucadorTitulo {
@@ -72,9 +73,36 @@ h2 {
   background: #31feae;
   transform: translate(-50%, -5%);
   z-index: 3;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
+}
+.inputBuscador > span > img {
+  width: 50%;
+  /* opacity: 0.5; */
+}
+
+.contenedorBuscar > .backArrow {
+  width: 3vw;
+  height: 3vw;
+  /* background: #f2f2f2; */
+  border-radius: 50%;
+  position: absolute;
+  left: 6%;
+  top: 5%;
+  cursor: pointer;
+
+}
+
+.contenedor .backArrow img {
+  width: 100%;
 }
 
 @media (max-width: 1024px) {
+  .contenedorBuscar {
+    width: 90%;
+  }
   .inputBuscador > input {
     margin-top: 5%;
     width: 60%;

@@ -10,6 +10,11 @@ import { KelvinCelsiusPipe } from './pipes/kelvin-celsius.pipe';
 import { CambiarImagenClimaDirective } from './directives/cambiar-imagen-clima.directive';
 import { ConstruirUrlImagenPipe } from './pipes/construir-url-imagen.pipe';
 import { HomeComponent } from './components/home/home.component';
+
+// sweet alert
+// import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+// import * as Swal from '@sweetalert2/ngx-sweetalert2';
+
 @NgModule({
   declarations: [
     AppComponent,
