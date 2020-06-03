@@ -34,6 +34,8 @@ export class SearchComponent implements OnInit {
   ngAfterViewInit(): void {
     this.ObtenerClimaActual();
   }
+
+  // metodo para ir a home
   IrHome() {
     this.router.navigate([""])
   }

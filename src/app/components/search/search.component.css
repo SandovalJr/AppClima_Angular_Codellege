@@ -48,6 +48,7 @@ h2 {
   position: relative;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .inputBuscador > input {
@@ -92,7 +93,6 @@ h2 {
   left: 6%;
   top: 5%;
   cursor: pointer;
-
 }
 
 .contenedor .backArrow img {
