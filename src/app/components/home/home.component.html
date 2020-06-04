@@ -2,15 +2,19 @@
   <ng-container *ngIf="!loading">
     <app-cards-weather
       [style.heigth.%]="60"
-      *ngFor="let clima of ArrayClimaFiltrado"
       [climaFiltradoRecibido]="clima"
-    ></app-cards-weather>
-  </ng-container>
-  <div class="tarjeta" (click)="IrAgregar()">
-    <p>Agregar Ciudad</p>
-    <div class="circuloGris" routerLink="add">
-      +
+      *ngFor="let clima of ArrayClimaFiltrado"
+      [MostrarBoton]="false"
+      ></app-cards-weather>
+    </ng-container>
+    <div class="tarjeta" (click)="IrAgregar()">
+      <p>Agregar Ciudad</p>
+      <div class="circuloGris" routerLink="add">
+        +
+      </div>
+      <img src="../../../assets/img/ciudad.PNG" />
     </div>
-    <img src="../../../assets/img/ciudad.PNG" />
   </div>
-</div>
+
+
+  <!-- [] se pasa sin llaves por que no le estoy pasando un valor -->

@@ -10,6 +10,7 @@ import { KelvinCelsiusPipe } from './pipes/kelvin-celsius.pipe';
 import { CambiarImagenClimaDirective } from './directives/cambiar-imagen-clima.directive';
 import { ConstruirUrlImagenPipe } from './pipes/construir-url-imagen.pipe';
 import { HomeComponent } from './components/home/home.component';
+import { DetallesComponent } from './components/detalles/detalles.component';
 
 // sweet alert
 // import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -24,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
     CambiarImagenClimaDirective,
     ConstruirUrlImagenPipe,
     HomeComponent,
+    DetallesComponent,
   ],
   imports: [BrowserModule, HttpClientModule, app_routes],
   providers: [],

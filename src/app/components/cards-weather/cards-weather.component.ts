@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ClimaFiltrado } from './../../interfaces/clima.interface';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-cards-weather',
   templateUrl: './cards-weather.component.html',
@@ -7,8 +8,11 @@ import { ClimaFiltrado } from './../../interfaces/clima.interface';
 })
 export class CardsWeatherComponent implements OnInit {
   @Input() climaFiltradoRecibido: ClimaFiltrado;
+  @Input() MostrarBoton: boolean = false;
 
-  constructor() {}
+  constructor(private router: Router) {
+    console.log(this.MostrarBoton);
+  }
 
   ngOnInit(): void {
     // console.log(this.climaFiltradoRecibido);
@@ -18,6 +22,7 @@ export class CardsWeatherComponent implements OnInit {
     const ArrayWeather = this.GetLocalStorage();
     ArrayWeather.push(this.climaFiltradoRecibido.NombreCiudad);
     localStorage.setItem('Climas', JSON.stringify(ArrayWeather));
+    // this.MostrarBoton == true;
   }
 
   public GetLocalStorage() {
@@ -26,6 +31,14 @@ export class CardsWeatherComponent implements OnInit {
       return [];
     } else {
       return ArrayWeather;
+    }
+  }
+
+  public irDetalles(nombreCiudad: string) {
+    console.log(nombreCiudad);
+
+    if (!this.MostrarBoton) {
+      this.router.navigate(['details', nombreCiudad]);
     }
   }
 }
