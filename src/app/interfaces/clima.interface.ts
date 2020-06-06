@@ -53,10 +53,34 @@ export interface clima {
 }
 
 export interface ClimaFiltrado {
-  NombreCiudad: string;
-  ClimaActual: string;
-  TemperaturaActual: number;
-  TemperaturaMaxima: number;
-  TemperaturaMinima: number;
-  Imagen: string;
+  NombreCiudad?: string;
+  ClimaActual?: string;
+  TemperaturaActual?: number;
+  TemperaturaMaxima?: number;
+  TemperaturaMinima?: number;
+  Imagen?: string;
+  Humedad?: number;
+  Wind?: number;
+}
+
+export interface clima2 {
+  coord: Coord;
+  weather: Weather[];
+  base: string;
+  main: Main;
+  visibility: number;
+  wind: Wind;
+  clouds: Clouds;
+  dt: number;
+  sys: Sys;
+  timezone: number;
+  id: number;
+  name: string;
+  cod: number;
+  temp: number;
+  feels_like: number;
+  temp_min: number;
+  temp_max: number;
+  pressure: number;
+  humidity: number;
 }

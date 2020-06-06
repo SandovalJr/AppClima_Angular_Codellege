@@ -5,24 +5,27 @@
         <div class="columnaDatos">
           <br /><br />
           <div class="gradosYclima">
-            <p>37°</p>
-            <span>Clear</span>
+            <p>{{ climaFiltrado.TemperaturaActual }}°</p>
           </div>
-
+          <div class="clima">
+            <span>{{ climaFiltrado.ClimaActual }}°</span>
+          </div>
           <div class="informacion">
             <span>
-              <p>Humidity</p>
-              <p>44%</p>
+              <p>Humidity:</p>
+              <p>{{ climaFiltrado.Humedad }}%</p>
             </span>
             <span>
-              <p>Wind</p>
-              <p>2K/M</p>
+              <p>Wind:</p>
+              <p>{{ climaFiltrado.Wind }}°</p>
             </span>
           </div>
         </div>
 
         <div class="columnaNombre">
-          <h3>Aguascalientes</h3>
+          <h3 style="border-bottom: white 2px solid;">
+            {{ climaFiltrado.NombreCiudad }}
+          </h3>
         </div>
       </div>
 

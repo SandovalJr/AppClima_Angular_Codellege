@@ -34,8 +34,9 @@ export class CardsWeatherComponent implements OnInit {
     }
   }
 
+
   public irDetalles(nombreCiudad: string) {
-    console.log(nombreCiudad);
+    // console.log(nombreCiudad);
 
     if (!this.MostrarBoton) {
       this.router.navigate(['details', nombreCiudad]);
