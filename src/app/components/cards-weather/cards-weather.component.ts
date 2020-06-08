@@ -20,9 +20,18 @@ export class CardsWeatherComponent implements OnInit {
 
   AgregarCiudad() {
     const ArrayWeather = this.GetLocalStorage();
-    ArrayWeather.push(this.climaFiltradoRecibido.NombreCiudad);
-    localStorage.setItem('Climas', JSON.stringify(ArrayWeather));
-    // this.MostrarBoton == true;
+    if (this.ChecarNoRepetidos(ArrayWeather) == 0) {
+      ArrayWeather.push(this.climaFiltradoRecibido.NombreCiudad);
+      localStorage.setItem('Climas', JSON.stringify(ArrayWeather));
+      // this.MostrarBoton == true;
+    }
+  }
+
+  private ChecarNoRepetidos(ArrayWeather: Array<string>): number {
+    const ciudades: Array<any> = ArrayWeather.filter(
+      (clima) => clima == this.climaFiltradoRecibido.NombreCiudad
+    );
+    return ciudades.length;
   }
 
   public GetLocalStorage() {
@@ -33,7 +42,6 @@ export class CardsWeatherComponent implements OnInit {
       return ArrayWeather;
     }
   }
-
 
   public irDetalles(nombreCiudad: string) {
     // console.log(nombreCiudad);
