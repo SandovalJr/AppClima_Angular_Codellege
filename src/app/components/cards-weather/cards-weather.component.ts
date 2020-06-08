@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ClimaFiltrado } from './../../interfaces/clima.interface';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-cards-weather',
   templateUrl: './cards-weather.component.html',
@@ -24,6 +25,12 @@ export class CardsWeatherComponent implements OnInit {
       ArrayWeather.push(this.climaFiltradoRecibido.NombreCiudad);
       localStorage.setItem('Climas', JSON.stringify(ArrayWeather));
       // this.MostrarBoton == true;
+    } else {
+      Swal.fire({
+        title: 'Ciudad Repetida',
+        icon: 'warning',
+        text: 'La ciudad ya fue seleccionada',
+      });
     }
   }
 
